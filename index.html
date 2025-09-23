@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <title>華宇童 | 個人網站</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 字體 -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --bg: #f9fafb;
+      --text: #111827;
+      --card: #ffffff;
+      --muted: #6b7280;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+header {
+
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+    header {
+      background-image: url('images/colorful.jpg'); /* 圖片路徑 */
+ 	    background-size: cover;                /* 拉滿容器 */
+ 	    background-position: center;           /* 置中對齊 */
+	    background-repeat: no-repeat;          /* 不要重複鋪排 */
+      height: 100vh;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 { font-size: 2.5rem; margin-bottom: .5rem; }
+    header p { font-size: 1.2rem; color: #e0e7ff; }
+    nav { margin-top: 1rem; }
+    nav a {
+      color: white; margin: 0 .75rem; text-decoration: none; font-weight: 600;
+    }
+    nav a:hover { text-decoration: underline; }
+    section { padding: 3rem 1rem; max-width: 1000px; margin: auto; }
+    h2 { font-size: 2rem; margin-bottom: 1rem; text-align: center; }
+    .muted { color: var(--muted); text-align: center; margin-bottom: 2rem; }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: var(--card);
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,.08);
+      transition: transform .2s;
+    }
+    .card:hover { transform: translateY(-5px); }
+    .card h3 { margin: .5rem 0; }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #1f2937;
+      color: #9ca3af;
+      margin-top: 2rem;
+    }
+    footer a { color: #e5e7eb; margin: 0 .5rem; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>華宇童</h1>
+    <p>國立台灣師範大學學生，就讀科技應用與人力資源發展學系</p>
+    <nav>
+      <a href="#about">關於我</a>
+      <a href="#projects">作品集</a>
+      <a href="#contact">聯絡我</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>關於我</h2>
+    <p class="muted">嗨！我是宇童，專注於製作響應式、美觀且易用的網站，擅長 HTML、CSS、JavaScript 及 React。</p>
+  </section>
+
+  <section id="projects">
+    <h2>作品集</h2>
+    <p class="muted">這裡是我最近的一些專案展示：</p>
+    <div class="projects">
+      <div class="card">
+        <h3>專案 A</h3>
+        <p>一個部落格平台，提供標籤與搜尋功能。</p>
+      </div>
+      <div class="card">
+        <h3>專案 B</h3>
+        <p>個人履歷網站，支援深色模式與響應式設計。</p>
+      </div>
+      <div class="card">
+        <h3>專案 C</h3>
+        <p>小型電商網站，整合購物車與付款功能。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>聯絡我</h2>
+    <p class="muted">歡迎透過以下方式聯繫我：</p>
+    <p style="text-align:center;">
+      📧 <a>41371232h@gapps.ntnu.edu.tw</a><br>
+      💻 <a href="https://github.com/41371232H/internet_web">github.com/41371232H/internet_web</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2025 華宇童</p>
+    <p>
+      <a href="#">GitHub</a> |
+      <a href="#">LinkedIn</a>
+    </p>
+  </footer>
+</body>
+</html>
