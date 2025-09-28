@@ -14,42 +14,49 @@
       --card: #DCE2F2;
       --muted: #6b7280;
     }
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-
       font-family: 'Poppins', sans-serif;
       background-color: #AFC0EE;
-
       color: var(--text);
       line-height: 1.6;
     }
 
     header {
       background: linear-gradient(0deg, #87A4E8, #503EC6);
-
- 	    background-size: cover;                /* 拉滿容器 */
- 	    background-position: top center;           /* 置中對齊 */
-	    background-repeat: no-repeat;          /* 不要重複鋪排 */
+      background-size: cover;
+      background-position: top center;
+      background-repeat: no-repeat;
       height: 100vh;
       color: white;
       padding: 2rem 1rem;
       text-align: center;
     }
+
     header h1 { font-size: 2.5rem; margin-bottom: .5rem; }
     header p { font-size: 1.2rem; color: #e0e7ff; }
     nav { margin-top: 1rem; }
     nav a {
-      color: white; margin: 0 .75rem; text-decoration: none; font-weight: 600; font-size: 1.5rem;
+      color: white;
+      margin: 0 .75rem;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.5rem;
     }
     nav a:hover { text-decoration: underline; }
+
     section { padding: 3rem 1rem; max-width: 1200px; margin: auto; }
     h2 { font-size: 2rem; margin-bottom: 1rem; text-align: center; }
     .muted { color: var(--muted); text-align: center; margin-bottom: 2rem; }
+
+    /* 作品集 */
     .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
     }
+
     .card {
       background: var(--card);
       padding: 1.5rem;
@@ -59,6 +66,7 @@
     }
     .card:hover { transform: translateY(-5px); }
     .card h3 { margin: .5rem 0; }
+
     footer {
       text-align: center;
       padding: 2rem 1rem;
@@ -68,14 +76,15 @@
     }
     footer a { color: #e5e7eb; margin: 0 .5rem; text-decoration: none; }
     footer a:hover { text-decoration: underline; }
+
     /* 統一圖片外框大小 */
     .slide-wrapper {
       width: 260px;
-      height: 180px;       /* 可以依需求調整高度 */
+      height: 180px;
       display: flex;
-      align-items: center; /* 垂直置中 */
-      justify-content: center; /* 水平置中 */
-      background: var(--card);   /* 照片周圍的空白底色 */
+      align-items: center;
+      justify-content: center;
+      background: var(--card);
       margin: 0 auto 1rem;
       border-radius: 8px;
       box-shadow: 0 4px 12px rgba(0,0,0,.1);
@@ -84,45 +93,61 @@
     .slide-wrapper img {
       max-width: 100%;
       max-height: 100%;
-      object-fit: contain; /* 保留完整圖片，不裁切 */
+      object-fit: contain;
       display: block;
     }
+
+    /* 技能進度條 */
     .bar {
       background: #eee;
       border-radius: 10px;
       overflow: hidden;
-      width: 100%;   /* 固定寬度，可以改成 150px 或 180px */
+      width: 100%;
       max-width: 500px;
       height: 10px;
-      margin-bottom: 0.5rem; /* 每個 bar 之間留點距離 */
+      margin-bottom: 0.5rem;
     }
     .progress {
-      background: #4f46e5;
+      width: 0;
       height: 100%;
+      background: var(--primary);
+      animation: fillProgress 1s forwards;
     }
 
+    @keyframes fillProgress {
+      to { width: var(--width); }
+    }
+
+    /* 左右框排版 */
     .about-content {
       display: grid;
-      grid-template-columns: 1fr 1fr; /* 左右各一半 */
-      gap: 2rem; /* 左右之間的間距 */
-      align-items: stretch; /* 讓每個區塊高度相同 */
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: stretch;
       margin-top: 2rem;
     }
 
-    /* 技能條 */
-    .skill {
-      text-align: left;
-    }
+    .skill { text-align: left; }
 
-
-    /* 右邊目標卡片 */
     .goals-card {
-      background: #DCE2F2;
+      background: var(--card);
       padding: 1.5rem;
       border-radius: 1rem;
       box-shadow: 0 4px 12px rgba(0,0,0,.1);
       text-align: left;
       line-height: 1.8;
+    }
+
+    /* 經歷框 */
+    .experience {
+      background: var(--card);
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,.1);
+      text-align: left;
+      line-height: 1.8;
+      margin: 2rem auto 0;
+      max-width: 1200px;
     }
   </style>
 </head>
@@ -138,124 +163,75 @@
     </nav>
   </header>
 
- <section id="about">
-  <h2>關於我</h2>
-  <p class="muted">
-    嗨！我是宇童，目前學習利用 HTML、CSS、JavaScript 製作響應式、美觀且易用的網站。
-  </p>
+  <section id="about">
+    <h2>關於我</h2>
+    <p class="muted">嗨！我是宇童，目前學習利用 HTML、CSS、JavaScript 製作響應式、美觀且易用的網站。</p>
 
-  <div class="about-content">
-    <!-- 左邊：技能條 -->
-    <div class="goals-card">
-      <h3>未來目標</h3>
-      <p>HTML</p>
-      <div class="bar"><div class="progress" style="width:75%"></div></div>
-      <p>VR</p>
-      <div class="bar"><div class="progress" style="width:90%"></div></div>
-      <p>Python</p>
-      <div class="bar"><div class="progress" style="width:70%"></div></div>
-      <p>問題解決</p>
-      <div class="bar"><div class="progress" style="width:95%"></div></div>
+    <div class="about-content">
+      <!-- 左邊：技能條 -->
+      <div class="goals-card">
+        <h3>技能</h3>
+        <p>HTML</p>
+        <div class="bar"><div class="progress" style="--width:75%"></div></div>
+        <p>VR</p>
+        <div class="bar"><div class="progress" style="--width:90%"></div></div>
+        <p>Python</p>
+        <div class="bar"><div class="progress" style="--width:70%"></div></div>
+        <p>問題解決</p>
+        <div class="bar"><div class="progress" style="--width:95%"></div></div>
+      </div>
+
+      <!-- 右邊：未來目標 -->
+      <div class="goals-card">
+        <h3>未來目標</h3>
+        <p>
+          我期望在大學階段扎實地學習目前的專業課程，特別是網頁設計與多媒體應用。<br>
+          我認為「遊戲式學習」是一個極具潛力的教學概念，能讓學生在互動中自然而然地學會知識。<br>
+          未來我希望能結合所學，投入數位遊戲式學習的專案，打造兼具趣味與教育性的作品，
+          讓學習過程更有動力以及效率。
+        </p>
+      </div>
     </div>
 
-    <!-- 右邊：未來目標 -->
-    <div class="goals-card">
-      <h3>未來目標</h3>
+    <!-- 經歷 -->
+    <div class="experience">
+      <h3>經歷</h3>
       <p>
-        我期望在大學階段扎實地學習目前的專業課程，特別是網頁設計與多媒體應用。<br>
-        我認為「遊戲式學習」是一個極具潛力的教學概念，能讓學生在互動中自然而然地學會知識。<br>
-        未來我希望能結合所學，投入數位遊戲式學習的專案，打造兼具趣味與教育性的作品，
-        讓學習過程更有動力以及效率。
+        在學習程式的過程中，我遇到過許多挑戰。剛開始寫程式時，各種錯誤接連出現——有的程式無法運行，有的結果不如預期。但透過不斷嘗試、調整與修正，我最終完成了作品。這樣的動手解決問題過程，不僅讓我對程式設計充滿成就感，也培養了我不怕錯誤、勇於嘗試的態度。<br>
+        我平時除了程式，也對 VR、數位遊戲等很有興趣。曾經製作過一個VR遊戲式學習專案，設計互動遊戲讓六年級小學生一邊在場景中尋寶闖關，一邊學習國中數學。這個經驗讓我發現，「遊戲式學習」能讓學生在互動中自然而然地吸收知識，而我希望未來能將這個概念應用到更多數位學習專案中，打造兼具趣味與教育性的作品。<br>
+        在團隊合作方面，我善於傾聽他人想法、分工合作，並且樂於分享學習資源。對我而言，學習程式不只是技能的累積，更是一個持續探索新事物、解決問題和創造價值的過程。
       </p>
     </div>
-  </div>
-</section>
+  </section>
 
   <section id="projects">
     <h2>作品集</h2>
     <p class="muted">這裡是我最近的一些專案展示：</p>
     <div class="projects">
-    <div class="card">
-      <h3>數位學習VR專案</h3>
-      <div class="slideshow-container">
+      <div class="card">
+        <h3>數位學習VR專案</h3>
         <div class="slide-wrapper">
           <img id="project-slide1" src="images/螢幕擷取畫面 2025-09-27 225548.png" alt="數位學習VR專案">
         </div>
+        <p>一個遊戲式學習的VR專案，讓小學生可以邊玩邊學習。</p>
       </div>
-      <p>一個遊戲式學習的VR專案，讓小學生可以邊玩邊學習。</p>
-    </div>
 
-    <div class="card">
-      <h3>scratch遊戲專案</h3>
-      <div class="slideshow-container">
+      <div class="card">
+        <h3>scratch遊戲專案</h3>
         <div class="slide-wrapper">
           <img id="project-slide2" src="images/螢幕擷取畫面 2025-09-27 231756.png" alt="scratch遊戲專案">
         </div>
+        <p>一個接掉落物小遊戲，學習營養知識與食物攝取。</p>
       </div>
-      <p>一個接掉落物小遊戲，學習營養知識與食物攝取。</p>
-    </div>
 
-    <div class="card">
-      <h3>敬請期待</h3>
-      <div class="slideshow-container">
+      <div class="card">
+        <h3>敬請期待</h3>
         <div class="slide-wrapper">
           <span style="color:#aaa; font-size:0.9rem;">敬請期待</span>
         </div>
+        <p>未來會有更多專案作品。</p>
       </div>
-      <p>未來會有更多專案。</p>
     </div>
-
-    <script>
-    function initSlideshow(imgId, images) {
-      const slideElement = document.getElementById(imgId);
-      let currentSlideIndex = 0;
-      let intervalId = null;
-      let timeoutId = null;
-
-      // 切換到下一張
-      function nextSlide() {
-        currentSlideIndex = (currentSlideIndex + 1) % images.length;
-        slideElement.src = images[currentSlideIndex];
-      }
-
-      // 滑鼠移入：500ms 後開始換，之後每 1500ms 換一次
-      slideElement.addEventListener('mouseenter', () => {
-        if (!intervalId && !timeoutId) {
-          timeoutId = setTimeout(() => {
-            nextSlide(); // 先換一次
-            intervalId = setInterval(nextSlide, 1500); // 之後每 1500ms 換
-          }, 500); // 延遲 500ms
-        }
-      });
-
-      // 滑鼠移出：清除 timeout + interval，並回到第一張
-      slideElement.addEventListener('mouseleave', () => {
-        clearTimeout(timeoutId);
-        clearInterval(intervalId);
-        timeoutId = null;
-        intervalId = null;
-        currentSlideIndex = 0;
-        slideElement.src = images[currentSlideIndex];
-      });
-    }
-
-    // 初始化專案 1
-    initSlideshow("project-slide1", [
-      "images/螢幕擷取畫面 2025-09-27 225548.png",
-      "images/螢幕擷取畫面 2025-09-27 225626.png",
-      "images/螢幕擷取畫面 2025-09-27 225703.png",
-      "images/螢幕擷取畫面 2025-09-27 225741.png"
-    ]);
-
-    // 初始化專案 2
-    initSlideshow("project-slide2", [
-      "images/螢幕擷取畫面 2025-09-27 231756.png",
-      "images/螢幕擷取畫面 2025-09-27 231825.png",
-      "images/螢幕擷取畫面 2025-09-27 232004.png",
-      "images/螢幕擷取畫面 2025-09-27 232042.png"
-    ]);
-    </script>
-
   </section>
 
   <section id="contact">
@@ -274,5 +250,52 @@
       <a href="https://www.linkedin.com/in/2905b364bskfbhskw/">LinkedIn</a>
     </p>
   </footer>
+
+  <!-- 輪播圖片 JS -->
+  <script>
+  function initSlideshow(imgId, images) {
+    const slideElement = document.getElementById(imgId);
+    let currentSlideIndex = 0;
+    let intervalId = null;
+    let timeoutId = null;
+
+    function nextSlide() {
+      currentSlideIndex = (currentSlideIndex + 1) % images.length;
+      slideElement.src = images[currentSlideIndex];
+    }
+
+    slideElement.addEventListener('mouseenter', () => {
+      if (!intervalId && !timeoutId) {
+        timeoutId = setTimeout(() => {
+          nextSlide();
+          intervalId = setInterval(nextSlide, 1500);
+        }, 500);
+      }
+    });
+
+    slideElement.addEventListener('mouseleave', () => {
+      clearTimeout(timeoutId);
+      clearInterval(intervalId);
+      timeoutId = null;
+      intervalId = null;
+      currentSlideIndex = 0;
+      slideElement.src = images[currentSlideIndex];
+    });
+  }
+
+  initSlideshow("project-slide1", [
+    "images/螢幕擷取畫面 2025-09-27 225548.png",
+    "images/螢幕擷取畫面 2025-09-27 225626.png",
+    "images/螢幕擷取畫面 2025-09-27 225703.png",
+    "images/螢幕擷取畫面 2025-09-27 225741.png"
+  ]);
+
+  initSlideshow("project-slide2", [
+    "images/螢幕擷取畫面 2025-09-27 231756.png",
+    "images/螢幕擷取畫面 2025-09-27 231825.png",
+    "images/螢幕擷取畫面 2025-09-27 232004.png",
+    "images/螢幕擷取畫面 2025-09-27 232042.png"
+  ]);
+  </script>
 </body>
 </html>
