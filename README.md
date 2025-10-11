@@ -1,7 +1,8 @@
 # internet_web
 網際網路概論
 
-## [HW1](https://41371232h.github.io/internet_web/index.html)
+## HW1
+### [個人網頁](https://41371232h.github.io/internet_web/index.html)
 ## HW2
 ### [解說影片](https://youtu.be/2a2FIxpYufY)/[修改:AItest](https://github.com/41371232H/internet_web/blob/main/React_HW2/AItest.tsx)
 **1.主題變更與 UI 色系調整**<br>
