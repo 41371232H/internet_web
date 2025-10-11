@@ -1,10 +1,10 @@
 # internet_web
 網際網路概論
 
-##[HW1](https://41371232h.github.io/internet_web/index.html)
-##HW2
-###[影片](https://youtu.be/2a2FIxpYufY)
-###[AItest](https://github.com/41371232H/internet_web/blob/main/React_HW2/AItest.tsx)
+## [HW1](https://41371232h.github.io/internet_web/index.html)
+## HW2
+### [影片](https://youtu.be/2a2FIxpYufY)
+### [AItest](https://github.com/41371232H/internet_web/blob/main/React_HW2/AItest.tsx)
 1.主題變更與 UI 色系調整
 主題改為「健康飲食 AI 助手」，修改成綠色健康風格（使用 #10b981、#22c55e 等色系），更貼近主題。
 2.新增首頁
