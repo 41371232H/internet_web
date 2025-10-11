@@ -1,5 +1,24 @@
 # internet_web
 網際網路概論
 
-- [HW1](https://41371232h.github.io/internet_web/index.html)
-- HW2[影片](https://youtu.be/2a2FIxpYufY)/[AItest](https://github.com/41371232H/internet_web/blob/main/React_HW2/AItest.tsx)
+##[HW1](https://41371232h.github.io/internet_web/index.html)
+##HW2
+###[影片](https://youtu.be/2a2FIxpYufY)
+###[AItest](https://github.com/41371232H/internet_web/blob/main/React_HW2/AItest.tsx)
+1.主題變更與 UI 色系調整
+主題改為「健康飲食 AI 助手」，修改成綠色健康風格（使用 #10b981、#22c55e 等色系），更貼近主題。
+2.新增首頁
+新增一個首頁頁面，讓使用者先輸入 Gemini API Key 和 模型名稱，再點選「開始聊天」進入主要互動畫面。
+3.加入歡迎訊息與提示詞
+在聊天頁面載入時，AI 會自動顯示「哈囉，我是健康飲食小助手！」的歡迎文字。
+並在畫面下方新增三個可點選的提示問題按鈕（例如「幫我安排一餐健康的菜餚」），方便使用者快速開始互動。
+4.強化 AI 回覆體驗
+新增「AI 思考中…」提示，讓使用者知道系統正在生成回覆。
+加入打字動畫效果，讓回覆文字逐字顯示。
+5.自動儲存 API Key 機制
+增加了「是否記住在本機」的選項，讓使用者可控制是否保存。
+6.系統提示詞（systemPrompt）
+在發送訊息前自動加入「你是一個健康飲食小助手，請用簡短、清晰的方式回答」這個隱藏提示，讓 AI 回覆更集中主題且不顯示給使用者。
+7.佈局調整與互動動畫
+使用 framer-motion 套件新增頁面切換與按鈕縮放動畫，整體互動更流暢。
+調整聊天區位置避免被底部覆蓋，首頁則改為置中顯示。
