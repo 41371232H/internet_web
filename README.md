@@ -26,3 +26,4 @@
 ### [作業三Repo連結](https://github.com/41371232H/internet_web_HW3)
 ## HW4
 ### [render網址](https://internet-web-hw3.onrender.com/)
+### [Netlify](https://sunny-chimera-bdd37d.netlify.app/)
